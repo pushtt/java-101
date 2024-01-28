@@ -9,13 +9,14 @@ public class Deck {
             for (int j = 0; j < suit.length; j++)
                 deck[i + 13*j] = rank[i] + suit[j];
 
-        for (int i = 0; i < deck.length; i++)
-            System.out.print(deck[i] + " ");
-        
-        for (int i = 0; i < 52; i++) {
-            int r = i + (int) (Math.random() * (52-i));
-            System.out.print(r);
+        for (int i = 0; i < deck.length; i++) {
+            int r = i + (int) (Math.random()  * (deck.length-i));
+            String t = deck[r]; // draw the first card
+            deck[r] = deck[i]; // swap pointer
+            deck[i] = t; // replace
         }
-
+        for (int i = 0; i < N; i++)
+            System.out.print(deck[i] + " ");
+        System.out.println();
     }
 }

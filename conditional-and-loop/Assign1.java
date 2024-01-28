@@ -1,13 +1,19 @@
 public class Assign1 {
-    public static void main(String[] args) {
-        int n = 123456789;
-        int m = 0;
-        while (n != 0)
+    public static void main(String[] args)
+    {
+        int a = 2;
+        int b = 3;
+        int c = 4;
+        if (a < b)
         {
-            m = (10 * m) + (n % 10);
-            n = n / 10;
+            if (b < c)
+            {
+                if (c < a) System.out.println(a + " " + b + " " + c);
+                else System.out.println(c + " " + b + " " + a);
+            }
+            else System.out.println(a + " " + c + " " + b);
         }
-        System.out.println(m);
+        else System.out.println(b + " " + a + " " + c);
     }
 }
 
