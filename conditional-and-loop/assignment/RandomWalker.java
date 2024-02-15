@@ -4,6 +4,7 @@ public class RandomWalker {
         int x = 0;
         int y = 0;
         int step = 0;
+        System.out.println("(0, 0)"); // starting point
         while (Math.abs(x) + Math.abs(y) != r) {
             step += 1;
             if (Math.random() < 0.25) x += 1;
