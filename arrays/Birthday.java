@@ -2,45 +2,34 @@ public class Birthday {
     public static void main(String[] args) {
         int n = Integer.parseInt(args[0]);
         double trials = Double.parseDouble(args[1]);
-        double frac = 0;
-        double sum = 0;
-        int[] t = new int[n+1]; // in the very unlucky day
+        int[] birthday_tracker = new int[n+2]; // in the very unlucky day
 
 
         for (int i = 0; i < trials; i++) {
             int person = 0;
-            boolean[] b = new boolean[n)];
+            boolean[] birthday = new boolean[n+1];
             while (true) {
                 person ++;
-                int rand = (int) (Math.random() * (n-1));
-                if (b[rand] == true) {
-                    t[person] ++;
-                    //System.out.println(t[person]);
+                int rand_birthday = (int) (Math.random() * (n))+ 1;
+                if (birthday[rand_birthday] == true) {
                     break;
                 }
-                b[rand] = true;
-                continue;
+                else birthday[rand_birthday] = true;
             }
+            birthday_tracker[person] ++;
         }
-        for (int i = 0; i < t.length; i++) {
-            sum += t[i];
+
+        int count = 1;
+        double sum = 0;
+        double frac = 0;
+        while (frac < 0.5) {
+            sum += birthday_tracker[count];
             frac = sum/trials;
-            System.out.print(i + "\t");
-            System.out.print(t[i] + "\t");
+            System.out.print(count + "\t");
+            System.out.print(birthday_tracker[count] + "\t");
             System.out.print(frac + "\n");
-            if (frac >= 0.5) break;
+            count ++;
         }
     }
 }
 
-        //while (frac < 0.5) {
-        //    for (int i = 0; i < t.length; i++) {
-        //        frac = sum/trials;
-        //        System.out.print(i+1 + "\t");
-        //        System.out.print(t[i] + "\t");
-        //        System.out.print(frac + "\n");
-
-        //}
-
-
-        //}
