@@ -6,7 +6,10 @@ public class DiscreteDistribution {
         int[] rand = new int[m];
         int[] cumsum = new int[args.length];
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cdc28f3 (add)
         // Store arguments to the arrays
         for (int i = 1; i < n.length; i++) {
              n[i] = Integer.parseInt(args[i]);
