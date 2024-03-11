@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
-      <module fileurl="file://$PROJECT_DIR$/input-output/input-output.iml" filepath="$PROJECT_DIR$/input-output/input-output.iml" />
       <module fileurl="file://$PROJECT_DIR$/java-101.iml" filepath="$PROJECT_DIR$/java-101.iml" />
-=======
-      <module fileurl="file://$PROJECT_DIR$/java-102.iml" filepath="$PROJECT_DIR$/java-102.iml" />
->>>>>>> cdc28f3 (add)
     </modules>
   </component>
 </project>
